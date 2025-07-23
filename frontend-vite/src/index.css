@@ -1,0 +1,197 @@
+/* Add your custom styles below */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+/* Container styles */
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+}
+
+.form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  min-width: 320px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #2563eb33;
+}
+
+.form-error {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-success {
+  color: #388e3c;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-button:hover {
+  background: #1746a0;
+}
+
+/* Task List Styles */
+.task-list-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.task-list-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.task-list-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.task-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.task-list-table th, .task-list-table td {
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.task-list-table th {
+  background: #f0f0f0;
+}
+
+.task-list-table .overdue {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.task-list-actions button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.task-list-actions .edit-btn {
+  background: #fbc02d;
+  color: #fff;
+}
+.task-list-actions .edit-btn:hover {
+  background: #f9a825;
+}
+.task-list-actions .delete-btn {
+  background: #d32f2f;
+  color: #fff;
+}
+.task-list-actions .delete-btn:hover {
+  background: #b71c1c;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  min-width: 300px;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.modal-actions .cancel-btn {
+  background: #e0e0e0;
+  color: #222;
+}
+.modal-actions .cancel-btn:hover {
+  background: #bdbdbd;
+}
+.modal-actions .delete-btn {
+  background: #d32f2f;
+  color: #fff;
+}
+.modal-actions .delete-btn:hover {
+  background: #b71c1c;
+}
