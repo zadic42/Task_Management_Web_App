@@ -22,7 +22,7 @@ function TaskEdit() {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const res = await axios.get(`${API_BASE_URL}/api/tasks`, {
+        const res = await axios.get(`http://localhost:5000/api/tasks`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         const task = res.data.find(t => t._id === id);
@@ -47,7 +47,7 @@ function TaskEdit() {
       return;
     }
     try {
-      await axios.put(`${API_BASE_URL}/api/tasks/${id}`, {
+      await axios.put(`http://localhost:5000/api/tasks/${id}`, {
         title,
         description,
         due_date: dueDate,

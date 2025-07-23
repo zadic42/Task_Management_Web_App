@@ -27,7 +27,7 @@ function TaskForm() {
       return;
     }
     try {
-      await axios.post(`${API_BASE_URL}/api/tasks`, {
+      await axios.post('http://localhost:5000/api/tasks', {
         title,
         description,
         due_date: dueDate,
