@@ -33,7 +33,7 @@ function TaskList() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${deleteId}`, {
+      await axios.delete(`https://task-management-web-app-backend-1ddz.onrender.com/api/tasks/${deleteId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTasks(tasks.filter(t => t._id !== deleteId));
@@ -46,7 +46,7 @@ function TaskList() {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${id}`, { status: newStatus }, {
+      await axios.put(`https://task-management-web-app-backend-1ddz.onrender.com/api/tasks/${id}`, { status: newStatus }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTasks(tasks.map(t => t._id === id ? { ...t, status: newStatus } : t));
