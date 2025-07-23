@@ -46,7 +46,7 @@ function TaskEdit() {
       return;
     }
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${id}`, {
+      await axios.put(`https://task-management-web-app-backend-1ddz.onrender.com/api/tasks/${id}`, {
         title,
         description,
         due_date: dueDate,
