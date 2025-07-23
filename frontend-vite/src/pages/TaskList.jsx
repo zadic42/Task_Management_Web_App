@@ -19,7 +19,7 @@ function TaskList() {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/tasks', {
+      const res = await axios.get(`${API_BASE_URL}/api/tasks`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTasks(res.data);
@@ -34,7 +34,7 @@ function TaskList() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${deleteId}`, {
+      await axios.delete(`${API_BASE_URL}/api/tasks/${deleteId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTasks(tasks.filter(t => t._id !== deleteId));
@@ -47,7 +47,7 @@ function TaskList() {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${id}`, { status: newStatus }, {
+      await axios.put(`${API_BASE_URL}/api/tasks/${id}`, { status: newStatus }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTasks(tasks.map(t => t._id === id ? { ...t, status: newStatus } : t));
