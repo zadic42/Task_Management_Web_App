@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import { API_BASE_URL } from '../api';
 
 const statusOptions = [
   { value: 'pending', label: 'Pending' },
@@ -21,7 +22,7 @@ function TaskEdit() {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/tasks`, {
+        const res = await axios.get(`${API_BASE_URL}/api/tasks`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         const task = res.data.find(t => t._id === id);
@@ -46,7 +47,7 @@ function TaskEdit() {
       return;
     }
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${id}`, {
+      await axios.put(`${API_BASE_URL}/api/tasks/${id}`, {
         title,
         description,
         due_date: dueDate,
