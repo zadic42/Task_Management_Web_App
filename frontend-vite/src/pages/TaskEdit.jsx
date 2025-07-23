@@ -21,7 +21,7 @@ function TaskEdit() {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/tasks`, {
+        const res = await axios.get(`https://task-management-web-app-backend-1ddz.onrender.com/api/tasks`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         const task = res.data.find(t => t._id === id);
